@@ -35,12 +35,27 @@ python -m http.server 8000
 
 Puis aller sur `http://localhost:3000` (ou 8000).
 
-## Publication sur GitHub Pages
+## Publication sur GitHub
 
-1. Créer un nouveau dépôt sur GitHub (ex. `geoportail-civ`).
-2. Pousser ce dossier vers le dépôt.
-3. Dans le dépôt : **Settings** → **Pages** → Source : **Deploy from a branch** → Branch : **main** (ou **master**) → **/ (root)** → Save.
-4. La carte sera disponible à : `https://<votre-username>.github.io/<nom-du-repo>/`
+Le dépôt Git est déjà initialisé avec un premier commit. Pour publier sur **votre GitHub** :
+
+### 1. Créer un nouveau dépôt sur GitHub
+
+- Allez sur [github.com/new](https://github.com/new).
+- Nom du dépôt : par ex. **geoportail-civ** (sans initialiser avec README).
+
+### 2. Lier et pousser le projet
+
+Dans un terminal, depuis le dossier `geoportail-perso` :
+
+Dépôt : **[github.com/AMAUDE/geoportail](https://github.com/AMAUDE/geoportail)** (déjà poussé).
+
+### 3. Activer GitHub Pages (pour publier le site en ligne)
+
+- Dans le dépôt : **Settings** → **Pages**.
+- Source : **Deploy from a branch**.
+- Branch : **main** → **/ (root)** → **Save**.
+- La carte sera en ligne à : **https://amaude.github.io/geoportail/**
 
 ## Données
 
