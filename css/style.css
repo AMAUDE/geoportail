@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-header: #1a365d;
+  --bg-sidebar: #2d3748;
+  --bg-panel: #2d3748;
+  --text-light: #e2e8f0;
+  --text-muted: #a0aec0;
+  --accent: #3182ce;
+  --border: #4a5568;
+  --hover-fill: rgba(49, 130, 206, 0.15);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #1a202c;
+  color: var(--text-light);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header style type ANSTAT */
+.header {
+  background: var(--bg-header);
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--bg-sidebar);
+  padding: 1rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar-section {
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-section h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.sidebar-section h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.layer-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.layer-control label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.layer-control input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--accent);
+}
+
+.info-panel {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+#info-content {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+#info-content .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+#info-content .row .key {
+  color: var(--text-muted);
+}
+
+#map {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--bg-panel);
+  color: var(--text-light);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.leaflet-popup-tip {
+  background: var(--bg-panel);
+}
+
+.leaflet-popup-content {
+  margin: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.footer {
+  flex-shrink: 0;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: #1a202c;
+  border-top: 1px solid var(--border);
+}
+
+/* Loading state */
+.loading .sidebar-section:first-of-type::after {
+  content: 'Chargement des couches...';
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}

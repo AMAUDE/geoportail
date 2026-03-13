@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Géoportail - Limites administratives Côte d'Ivoire</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="logo">Géoportail</h1>
+        <p class="tagline">Limites administratives · Côte d'Ivoire</p>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h2>Couches</h2>
+          <p class="hint">Survoler une zone pour afficher les informations.</p>
+          <div class="layer-control">
+            <label><input type="checkbox" id="layer-region" checked> Régions</label>
+            <label><input type="checkbox" id="layer-departement"> Départements</label>
+            <label><input type="checkbox" id="layer-district"> Districts</label>
+          </div>
+        </div>
+        <div class="sidebar-section info-panel" id="info-panel">
+          <h3>Indicateurs</h3>
+          <div id="info-content">Survoler une zone...</div>
+        </div>
+      </aside>
+
+      <div id="map"></div>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Géoportail personnalisé · Données limites administratives</span>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="data/region.js"></script>
+  <script src="data/departement.js"></script>
+  <script src="data/district.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
